@@ -20,219 +20,133 @@
 
 /* Navbar Styling */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #2c3e50;
-    color: #fff;
-    .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #2c3e50;
-    color: #fff;
-    overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #2c3e50;
+  color: #fff;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-right: 10px; /* Adds space between the image and text */
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 10px; /* Adds space between the image and text */
 }
 
 .logo-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    z-index: 3; 
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  z-index: 3; 
 }
 
 .nav-links li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 8px 15px;
-    transition:  0.3s ease;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 15px;
+  transition:  0.3s ease;
 }
 
 .nav-links li a:hover {
-    background-color: #555;
-    border-radius: 5px;
+  background-color: #555;
+  border-radius: 5px;
 }
 
 /* Hamburger Button Styling */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 3; 
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 3; 
 }
 
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #312f2f;
-    margin: 4px 0;
-    transition: 0.4s;
-}
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s; }
 
 @media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        height: 100vh;
-        width: 100%;
-        background-color: rgba(51, 51, 51, 0.9);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-    }
+  .navbar{
+    position: sticky;
+    z-index: 100;
+  }
+  .nav-links {
+      display: none;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba(51, 51, 51, 0.9);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease-in-out;
+      opacity: 0;
+  }
 
-    .nav-links.active {
-        transform: translateX(0);
-    }
+  .nav-links.active {
+      transform: translateX(0);
+      opacity: 1;
+  }
 
-    .nav-links li {
-        margin: 20px 0;
-    }
+  .nav-links li {
+      margin: 20px 0;
+  }
 
-    .hamburger {
-        display: flex;
-    }
+  .hamburger {
+      display: block;
+  }
+}
+@media (max-width: 400px) {
+  .navbar{
+    position: sticky;
+    z-index: 100;
+  }
 }
 
 /* Transition for hamburger */
-.hamburger.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
+.change .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+  background-color: #ffffff; }
+
+.change .bar2 {
+  opacity: 0;
+  background-color: #ffffff; }
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-6px, -7px);
+  background-color: #ffffff; }
+
+.stop-scroll {
+  opacity: 1;
+  text-align: center;
+  align-content: center;
 }
 
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo-img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-right: 10px; /* Adds space between the image and text */
-}
-
-.logo-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    z-index: 3; 
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 8px 15px;
-    transition:  0.3s ease;
-}
-
-.nav-links li a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-/* Hamburger Button Styling */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 3; 
-}
-
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #312f2f;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        height: 100vh;
-        width: 100%;
-        background-color: rgba(51, 51, 51, 0.9);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .nav-links.active {
-        transform: translateX(0);
-    }
-
-    .nav-links li {
-        margin: 20px 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-
-/* Transition for hamburger */
-.hamburger.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
 
 /* Banner Section Styling */
 
@@ -402,7 +316,11 @@
     }
 }
 
-/* Projects Section */
+/* Project Section */
+
+.current-projects {
+  display:block ;
+}
 .projects-title {
   text-align: center;
   padding: 25px 0;
@@ -414,6 +332,75 @@
   color: #fff; /* White text to contrast with the black background */
   font-size: 32px; /* Font size for the heading */
   margin: 0; /* Remove default margin */
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 600px; /* Set a fixed height for the card */
+  max-width: fit-content; /* Set the max width of the card */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+/* Image takes up 40% of the card height */
+.card-image {
+  height: 40%; /* Image container takes 40% of card height */
+  width: 100%; /* Full width */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Ensure the image covers the container without distortion */
+}
+
+/* Content takes up the remaining 60% */
+.card-content {
+  height: 60%; /* Remaining height for the content */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-content h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card-button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design for various screen sizes */
+
+
+@media (max-width: 480px) {
+  .card {
+      height: 500px; /* Adjust height for even smaller screens */
+      max-width: 100%;
+      margin: 0px; /* Allow the card to take full width on small screens */
+  }
 }
 
 /* Service section */
@@ -450,18 +437,18 @@
 }
 
 /* Styling for the content area */
-.card-content {
+.serv-card-content {
   width: 60%; /* Content takes up 60% of the card */
   padding: 20px;
 }
 
-.card-content h2 {
+.serv-card-content h2 {
   margin-bottom: 10px;
   font-size: 24px;
   color: #333;
 }
 
-.card-content p {
+.serv-card-content p {
   font-size: 16px;
   color: #666;
 }
