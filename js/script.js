@@ -1,9 +1,8 @@
-
 const navLinks = document.getElementById('nav-links');
 $(document).ready(function() {	
 	$('.current-projects').slick({
 		dots: true,
-		infinite: false,
+		infinite: true,
 		autoplay: true,
 		autoplaySpeed: 1000,
 		speed: 300,
@@ -37,6 +36,9 @@ $(document).ready(function() {
 			  dots: true
 			}
 		  }
+		  // You can unslick at a given breakpoint now by adding:
+		  // settings: "unslick"
+		  // instead of a settings object
 		]
 	  });
 	/* Navigation burger onclick side navigation show */
@@ -52,5 +54,4 @@ $(document).ready(function() {
 	});
 });
 new WOW().init();
-
  
