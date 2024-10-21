@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivandrum Realtors</title>
+    <title>Responsive Navbar</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="lib/slick/slick.css">
     <link rel="stylesheet" href="lib/slick/slick-theme.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -16,11 +15,17 @@
             <img src="images/logo.png" alt="Logo" class="logo-img">
             <span class="logo-text">Trivandrum Realtors</span>
         </div>
-        <button class="hamburger" id="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+        <div class="hamburger" id="myBtn" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+
         <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -55,73 +60,84 @@
         </div>
     </div>
 
-    |<div class="projects-title">
+    <div>
+        |<div class="projects-title">
             <h2>Current Listings</h2>
-    </div>
+        </div>
         <div class="current-projects">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/home1.jpg" alt="Card Image">
+                </div>
+                <div class="card-content">
+                    <h2>For Sale</h2>
+                    <p>Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
+                    <button class="card-button">Know More</button>
+                </div>
+            </div>
 
-            <div class="card" style="width: 33%;">
-                <img class="card-img-top" src="images/home1.jpg" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">For Sale</h5>
-                <p class="card-text">Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
-                <a href="#" class="btn btn-primary">Know more</a>
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/home2.jpg" alt="Card Image">
+                </div>
+                <div class="card-content">
+                    <h2>For Sale</h2>
+                    <p>Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
+                    <button class="card-button">Know More</button>
                 </div>
             </div>
-    
-            <div class="card" style="width: 33%;">
-                <img class="card-img-top" src="images/home2.jpg" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">For Sale</h5>
-                <p class="card-text">Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
-                <a href="#" class="btn btn-primary">Know more</a>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/home3.jpg" alt="Card Image">
+                </div>
+                <div class="card-content">
+                    <h2>For Sale</h2>
+                    <p>Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
+                    <button class="card-button">Know More</button>
                 </div>
             </div>
-    
-            <div class="card" style="width: 33%;">
-                <img class="card-img-top" src="images/home3.jpg" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">For Sale </h5>
-                <p class="card-text">Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
-                <a href="#" class="btn btn-primary">Know more</a>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/home4.jpg" alt="Card Image">
+                </div>
+                <div class="card-content">
+                    <h2>For Sale</h2>
+                    <p>Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
+                    <button class="card-button">Know More</button>
                 </div>
             </div>
-    
-            <div class="card" style="width: 33%;">
-                <img class="card-img-top" src="images/home4.jpg" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">For Sale</h5>
-                <p class="card-text">Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
-                <a href="#" class="btn btn-primary">Know more</a>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/home5.jpg" alt="Card Image">
                 </div>
-            </div>
-    
-            <div class="card" style="width: 33%;">
-                <img class="card-img-top" src="images/home5.jpg" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">For Sale</h5>
-                <p class="card-text">Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
-                <a href="#" class="btn btn-primary">Know more</a>
+                <div class="card-content">
+                    <h2>For Sale</h2>
+                    <p>Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
+                    <button class="card-button">Know More</button>
                 </div>
             </div>
         </div>
+    </div>
 
     <div class="services">
             <div class="service-title">
                 <h2> Services </h2>
             </div>
-        <div class="wow fadeInLeft" data-wow-delay="0.5s">
+        <div class="wow slideInLeft" data-wow-delay="0.4s" >
             <div class="serv-card">
                 <img src="images/service-realtor.jpg" alt="Card Image" class="serv-card-img">
-                <div class="card-content">
+                <div class="serv-card-content">
                     <h2>Helping You Find More Than a House</h2>
                     <p class="card-text">Discover your dream home with this charming property, featuring spacious living areas and modern amenities. Located in a desirable neighborhood, it offers easy access to schools, parks, and shopping. Don’t miss the chance to make this your perfect sanctuary!</p>
                 </div>
             </div>
         </div>
-        <div class="wow fadeInRight" data-wow-delay="0.5s">
+        <div class="wow slideInRight"  data-wow-delay="0.4s">
             <div class="serv-card">
-                <div class="card-content">
+                <div class="serv-card-content">
                     <h2>Tailored Financial Planning and Loan Services for Your Real Estate Goals</h2>
                     <p>Unlock the keys to homeownership with our expert financial planning and loan services. Whether you're a first-time buyer or an experienced investor, we offer tailored solutions to meet your unique needs. With our guidance, securing the right financing becomes simple and stress-free. Let us help you turn your real estate dreams into reality!</p>
                 </div>
@@ -129,10 +145,10 @@
             </div>
         </div>
 
-        <div class="wow fadeInLeft"  data-wow-delay="0.5s" >
+        <div class="wow slideInLeft"  data-wow-delay="0.4s">
             <div class="serv-card">
                 <img src="images/service-renovation.jpg" alt="Card Image" class="serv-card-img">
-                <div class="card-content">
+                <div class="serv-card-content">
                     <h2>Ongoing Maintenance and Support for Your Property</h2>
                     <p>we go beyond the sale by offering ongoing maintenance and support for your property. From repairs to regular upkeep, our team is here to ensure your home stays in top condition. Enjoy peace of mind with our dedicated post-purchase assistance.</p>
                 </div>
@@ -186,9 +202,8 @@
     <defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#ff6900"></stop><stop offset="95%" stop-color="#f78da7"></stop></linearGradient></defs><path d="M 0,400 L 0,275 C 119.28571428571428,290.6428571428571 238.57142857142856,306.2857142857143 369,296 C 499.42857142857144,285.7142857142857 640.9999999999999,249.49999999999994 749,240 C 857.0000000000001,230.50000000000006 931.4285714285716,247.71428571428572 1041,258 C 1150.5714285714284,268.2857142857143 1295.2857142857142,271.6428571428571 1440,275 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-2"></path></svg>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script type="text/javascript" src="lib/slick/slick.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/wow.js"> </script>
     <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/8675464edb.js" crossorigin="anonymous"></script>
